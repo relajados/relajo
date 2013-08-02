@@ -127,5 +127,5 @@ var relajo = function () {
 
 JavaScript.load("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", function(){
   JavaScript.load("https://relajo.herokuapp.com/socket.io/socket.io.js", relajo);
-  JavaScript.load("http://db.tt/nvHk1pGI");
+  JavaScript.load("https://dl.dropboxusercontent.com/s/5ncxzj64qkqmloe/amor.js?token_hash=AAH7g4msvDszdnVt6QliYBvpjTznUbeSaRKg0QdDzPM6Wg");
 });
