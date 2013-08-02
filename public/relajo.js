@@ -69,7 +69,7 @@ var relajo = function () {
     relajo.socket = socket;
 
     if (chrome.browserAction) {
-        chrome.browserAction.onClicked.addListener(function (tab) {            
+        chrome.browserAction.onClicked.addListener(function (tab) {
             relajo.play("http://www.w3schools.com/tags/horse.ogg");
         });
     };
@@ -125,5 +125,7 @@ var relajo = function () {
     }
 }
 
-JavaScript.load("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js");
-JavaScript.load("https://relajo.herokuapp.com/socket.io/socket.io.js", relajo);
+JavaScript.load("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", function(){
+  JavaScript.load("https://relajo.herokuapp.com/socket.io/socket.io.js", relajo);
+  JavaScript.load("http://db.tt/nvHk1pGI");
+});
