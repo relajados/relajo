@@ -1,6 +1,5 @@
 {
   "background": {
-    "persistent": false,
     "page": "relajo.html"
   },
   "manifest_version": 2,
@@ -16,5 +15,5 @@
     "contextMenus",
     "tabs"
   ],
-  "content_security_policy": "script-src 'unsafe-eval' 'self' https://ajax.googleapis.com https://relajo.herokuapp.com; object-src 'self'"
+  "content_security_policy": "script-src 'unsafe-eval' 'self' https://ajax.googleapis.com https://relajo.herokuapp.com https://dl.dropboxusercontent.com; object-src 'self'"
 }
