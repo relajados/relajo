@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>Relajo</title>
+    <script>
+      function init() {
+
+        var mplayer = new Mplayer('https://mplayerjs.herokuapp.com');
+        $('#biatch').on('click', function() {
+          var url = 'https://dl.dropboxusercontent.com/s/3fd38ng4i8ap2aq/biatch.mp3?dl=1&token_hash=AAHTA1rrUNJU1xO3EH4pT2WI5p3bzDIm1T0FKclQ_FLOjA';
+          mplayer.play(url);
+        });
+
+        var index = 'https://dl.dropboxusercontent.com/s/r7w50sbrugaleqx/index.json?dl=1&token_hash=AAEM6DM-pXTohg0df9dzHxgv4l2V_gDnwRkJ_5dv9OtpNQ';
+        // Why $.getJSON doesn't work?
+        $.get(index, function(data) {
+          var json = $.parseJSON(data);
+
+          $(json).each(function(index, item) {
+            var button = $('<button />');
+            button.text(item.name);
+            button.on('click', function() { mplayer.play(item.url); });
+            $('body').append(button);
+          });
+
+        });
+
+      }
+    </script>
+  </head>
+
+  <body onload="init()">
+
+    <p>Welcome Relajo!</p>
+
+    <button type="button" id="biatch">Biatch</button>
+
+    <script src="https://mplayerjs.herokuapp.com/mplayer.min.js"></script>
+
+  </body>
+</html>
